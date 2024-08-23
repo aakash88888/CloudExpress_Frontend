@@ -52,7 +52,8 @@ window.cronyWidget = function (customConfig) {
       const body = JSON.stringify(events);
       events = []; // Clear events after sending
   
-      const response = await fetch(`${serverURL}/api/record`, {
+      const response = await fetch(`${serverURL}/api/last-record`, 
+        {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,4 +74,26 @@ window.cronyWidget = function (customConfig) {
   // Save events periodically
   setInterval(saveEvents, 10 * 1000);
 
+};
+
+async function deleteFolder() {
+  try {
+    const response = await fetch(`${serverURL}/api/delete-folder`, {
+      method: 'DELETE'
+    });
+
+    if (response.ok) {
+      // Update the UI to reflect the deleted folder
+      fetchFolderList();
+    } else {
+      console.error('Error deleting folder:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Error deleting folder:', error);
+  }
+}
+
+
+window.onload = function () {
+  deleteFolder();
 };
