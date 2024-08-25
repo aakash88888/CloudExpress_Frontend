@@ -8,7 +8,8 @@ cronyScript.type = "text/javascript";
 const PORT = 3001;
 // const serverURL = `http://localhost:${PORT}`
 
-const serverURL = 'https://cloudexpress-backend.onrender.com'   //Final backend
+// const serverURL = 'https://cloudexpress-backend.onrender.com'   //Final backend
+const serverURL = 'https://230ab316.cloudexpress-frontend.pages.dev' //Cloudflare
 
 // let sessionID;
 
