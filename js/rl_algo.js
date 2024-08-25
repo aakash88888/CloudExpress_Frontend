@@ -42,6 +42,6 @@ async function fetchAndApplyStyles() {
     }
 }
 
-window.onload = function () {
-    fetchAndApplyStyles(); // Replace with your function name
+window.onload = async function () {
+    await fetchAndApplyStyles(); // Replace with your function name
 };
