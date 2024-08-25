@@ -73,6 +73,6 @@ async function deleteFolder() {
 }
 
 
-window.onload = function () {
-  deleteFolder();
+window.onload = async function () {
+  await deleteFolder();
 };
