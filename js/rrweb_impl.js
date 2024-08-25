@@ -9,7 +9,7 @@ const PORT = 3001;
 // const serverURL = `http://localhost:${PORT}`
 
 // const serverURL = 'https://cloudexpress-backend.onrender.com'   //Final backend
-const serverURL = 'https://230ab316.cloudexpress-frontend.pages.dev' //Cloudflare
+const serverURL = 'https://0f1955cc.cloudexpress-backend.pages.dev' //Cloudflare
 
 // let sessionID;
 
