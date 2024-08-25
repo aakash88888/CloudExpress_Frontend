@@ -10,22 +10,7 @@ const PORT = 3001;
 
 const serverURL = 'https://cloudexpress-backend.onrender.com'   //Final backend
 
-let sessionID;
-
-// Fetch max interval value from the backend
-async function fetchMaxInterval() {
-  try {
-    const response = await fetch(`${serverURL}/api/max-interval`);
-    if (!response.ok) {
-      throw new Error(`Error fetching session ID: ${response.statusText}`); // Handle non-200 responses
-    }
-    const data = await response.json();
-    sessionID = data.maxInterval;
-    console.log('Session ID:', sessionID);
-  } catch (error) {
-    console.error('Error fetching session ID:', error);
-  }
-}
+// let sessionID;
 
 // async function getSessionID() {
 //   await fetchMaxInterval();
@@ -82,12 +67,6 @@ async function deleteFolder() {
       method: 'DELETE'
     });
 
-    if (response.ok) {
-      // Update the UI to reflect the deleted folder
-      fetchFolderList();
-    } else {
-      console.error('Error deleting folder:', response.statusText);
-    }
   } catch (error) {
     console.error('Error deleting folder:', error);
   }
